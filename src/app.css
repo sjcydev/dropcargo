@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-	font-family: 'Roboto', sans-serif;
-	word-spacing: 0.25em;
+  font-family: "Roboto", sans-serif;
+  word-spacing: 0.25em;
+
+  --p: 276.3 54.36% 29.22%;
 }
 
 .mosaic {
-	background-image: radial-gradient(#444cf7 0.5px, hsl(var(--b1)) 0.5px);
-	background-size: 10px 10px;
+  background-image: radial-gradient(#444cf7 0.5px, hsl(var(--b1)) 0.5px);
+  background-size: 10px 10px;
 }
 
 .waves {
-	fill: hsl(var(--b1));
+  fill: hsl(var(--b1));
 }
 
 .wave1 {
-	position: absolute;
-	bottom: -2em;
+  position: absolute;
+  bottom: -2em;
 }
 
 @media only screen and (max-width: 1024px) {
-	.wave1 {
-		bottom: -1em;
-	}
+  .wave1 {
+    bottom: -1em;
+  }
 }

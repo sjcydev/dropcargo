@@ -8,14 +8,20 @@
     Preview,
     Section,
     Text,
+    Img,
   } from "svelte-email";
+
+  let logo =
+    "https://res.cloudinary.com/dx312n0ce/image/upload/f_auto,q_auto/wwssl6h9nifcwvmghrqy";
+  let logoNombre =
+    "https://res.cloudinary.com/dx312n0ce/image/upload/f_auto,q_auto/vvvwedj4hjflqnlhpwzj";
 
   const preview = "Correo de Bienvenida e Información del Casillero";
   export let nombre: String;
   export let apellido: String;
   export let casillero: String;
 
-  let codigo_de_compania = "CX";
+  let codigo_de_compania = "DCE";
   let nombre_de_compania = "DropCargo Express";
   let direccion = {
     direccion1: "7854 NW 46TH ST UNIT 2",
@@ -67,6 +73,23 @@
     borderColor: "#cccccc",
     margin: "20px 0",
   };
+
+  const logoIcon = {
+    width: "2.75rem",
+    height: "auto",
+    "margin-right": "0.5rem",
+  };
+
+  const logoName = {
+    width: "8rem",
+    height: "auto",
+  };
+
+  const logoContainer = {
+    display: "flex",
+    width: "fit-content",
+    margin: "0 auto",
+  };
 </script>
 
 <Html>
@@ -74,6 +97,24 @@
   <Preview {preview} />
   <Section style={main}>
     <Container style={container}>
+      <Container style={logoContainer}>
+        <Img
+          src={logo}
+          width="30"
+          height="30"
+          style={logoIcon}
+          alt="DropCargoExpress
+        Logo"
+        />
+        <Img
+          src={logoNombre}
+          width="30"
+          height="30"
+          style={logoName}
+          alt="DropCargoExpress
+        Logo"
+        />
+      </Container>
       <Heading style={heading}
         >Bienvenido a {nombre_de_compania} ({codigo_de_compania})!</Heading
       >

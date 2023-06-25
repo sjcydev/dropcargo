@@ -144,7 +144,7 @@
             </figure>
             <div class="card-body items-center text-center px-5 py-2 lg:p-8">
               <h2 class="card-title text-base lg:text-lg">{servicio.titulo}</h2>
-              <p class="text-justify text-sm lg:text-base">
+              <p class="text-center text-sm lg:text-base">
                 {servicio.contenido}
               </p>
             </div>

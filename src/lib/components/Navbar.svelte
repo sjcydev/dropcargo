@@ -2,7 +2,7 @@
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
   import Logo from "$lib/assets/logo.png";
-  import LogoName from "$lib/assets/logoFull.png";
+  import LogoName from "$lib/assets/logoNombre.png";
 </script>
 
 <nav

@@ -8,12 +8,17 @@ import { render } from "svelte-email";
 export const POST = async ({ request }: RequestEvent) => {
   let { usuario } = await request.json();
 
-  const { nombre, apellido, cedula, correo, sexo, nacimiento } =
+  let { nombre, apellido, cedula, correo, sexo, nacimiento } =
     usuario as Usuario;
 
   let currUser = await prisma.usuarios.findUnique({
     where: { correo: correo },
   });
+
+  nombre = nombre.toLowerCase();
+  nombre = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+  apellido = apellido.toLowerCase();
+  apellido = apellido.charAt(0).toUpperCase() + apellido.slice(1);
 
   if (currUser) {
     return new Response(
@@ -83,7 +88,7 @@ export const POST = async ({ request }: RequestEvent) => {
       .sendTransacEmail({
         sender: {
           email: "dropcargo.exp@gmail.com",
-          name: "DCE",
+          name: "DropCargo Express",
         },
         to: [
           {

@@ -15,11 +15,4 @@ model Usuarios {
   cedula     String
   nacimiento DateTime @db.Date
   sexo       String
-  // tipo       Tipo     @default(PERSONAL)
-  // sucursal   String
 }
-
-// enum Tipo {
-//   PERSONAL
-//   COORPORATIVO
-// }
