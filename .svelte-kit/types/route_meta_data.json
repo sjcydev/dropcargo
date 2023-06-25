@@ -1,0 +1,12 @@
+{
+	"/": [],
+	"/api": [
+		"src/routes/api/+page.server.ts"
+	],
+	"/api/usuarios": [
+		"src/routes/api/usuarios/+page.server.ts",
+		"src/routes/api/usuarios/+server.ts"
+	],
+	"/registrar": [],
+	"/tracking": []
+}
