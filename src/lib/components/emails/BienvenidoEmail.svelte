@@ -90,6 +90,16 @@
     width: "fit-content",
     margin: "0 auto",
   };
+
+  const footerTitle = {
+    ...paragraph,
+    fontSize: "16px",
+  };
+
+  const footerText = {
+    ...paragraph,
+    fontSize: "14px",
+  };
 </script>
 
 <Html>
@@ -159,6 +169,47 @@
         >. Sin el numero de casillero no podremos rastrear su paquete cuando
         llegue a Panamá.
       </Text>
+      <Hr style={hr} />
+      <Text style={footerTitle}>
+        Para nosotros es un placer poder realizarles la siguiente propuesta:
+      </Text>
+      <ul>
+        <li>
+          <Text style={footerText}>
+            En caso de solicitar asegurar su mercancía de alto valor (OPCIONAL)
+            se le cobrara el 20% del valor total de su factura comercial previo
+            aviso. (Adjuntar factura comercial).
+          </Text>
+        </li>
+        <li>
+          <Text style={footerText}>
+            En caso de pérdida se hará responsable al 100 % una vez el cliente
+            tenga asegurada su mercancía. De lo contrario solo nos haremos
+            responsables por el 25% del valor y contamos con 8 días hábiles para
+            realizar las averiguaciones pertinentes, una vez se tenga la certeza
+            con firma incluida de uno de nuestros colaboradores en la bodega en
+            Miami.
+          </Text>
+        </li>
+        <li>
+          <Text style={footerText}>
+            NO podemos hacernos responsables por carga entregada por USPS puesto
+            que no tenemos seguridad de entrega.
+          </Text>
+        </li>
+        <li>
+          <Text style={footerText}>
+            No podemos hacernos responsable por daño en mercancía mal empacada
+            por exportación
+          </Text>
+        </li>
+        <li>
+          <Text style={footerText}>
+            No podemos hacernos responsable por paquetes, después de 1 mes de no
+            ser retirado en la oficina.
+          </Text>
+        </li>
+      </ul>
     </Container>
   </Section>
 </Html>
