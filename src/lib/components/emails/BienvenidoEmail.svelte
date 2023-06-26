@@ -21,7 +21,7 @@
   export let apellido: String;
   export let casillero: String;
 
-  let codigo_de_compania = "DCE";
+  let codigo_de_compania = "DROP";
   let nombre_de_compania = "DropCargo Express";
   let direccion = {
     direccion1: "7854 NW 46TH ST UNIT 2",

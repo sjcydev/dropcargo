@@ -53,7 +53,7 @@
     <div
       in:blur={{ duration: 750, amount: 2 }}
       class="hero-content text-center text-primary-content flex-col
-    lg:flex-row-reverse gap-10 mb-32 lg:mb-0"
+    lg:flex-row-reverse lg:gap-10 mb-32 lg:mb-0"
     >
       <div class="text-left p-4 lg:p-0">
         <h1 class="titulo mb-5 text-4xl lg:text-5xl font-medium">
@@ -176,51 +176,30 @@
         >Abre tu Cuenta Gratis</button
       >
     </div>
-    <!-- 	<div class="text-primary-content grid place-items-center mb-10"> -->
-    <!-- 		<h2 class="text-4xl mb-10">Preguntas Frecuentes</h2> -->
-    <!-- 		<div class="w-full text-left"> -->
-    <!-- 			<div class="collapse bg-base-200 mb-3"> -->
-    <!-- 				<input type="checkbox" /> -->
-    <!-- 				<div class="collapse-title text-xl font-medium">Como realizar pedidos?</div> -->
-    <!-- 				<div class="collapse-content"> -->
-    <!-- 					<p>Abre cuenta...mas detalles</p> -->
-    <!-- 				</div> -->
-    <!-- 			</div> -->
-    <!-- 			<div class="collapse bg-base-200 mb-3"> -->
-    <!-- 				<input type="checkbox" /> -->
-    <!-- 				<div class="collapse-title text-xl font-medium">Donde puedo recoger mis paquetes?</div> -->
-    <!-- 				<div class="collapse-content"> -->
-    <!-- 					<p>Sucursales y horarios</p> -->
-    <!-- 				</div> -->
-    <!-- 			</div> -->
-    <!-- 			<div class="collapse bg-base-200 mb-3"> -->
-    <!-- 				<input type="checkbox" /> -->
-    <!-- 				<div class="collapse-title text-xl font-medium"> -->
-    <!-- 					Como puedo comprar si no tengo tarjeta de credito? -->
-    <!-- 				</div> -->
-    <!-- 				<div class="collapse-content"> -->
-    <!-- 					<p>Ofrecemos mas servicios</p> -->
-    <!-- 				</div> -->
-    <!-- 			</div> -->
-    <!-- 		</div> -->
-    <!-- 	</div> -->
   </div>
 </div>
 
 <div class="hero lg:h-fit relative bg-base-100">
   <div class="hero-content text-primary-content">
     <div class="grid lg:grid-cols-2 place-items-center">
-      <div class="w-full p-10 lg:p-20">
+      <div class="w-full p-5 lg:p-20">
         <h1 class="mb-3 text-3xl font-medium">Horario</h1>
         <div>
-          <p>Lunes - Viernes</p>
-          <p>9:00 AM - 5:00 PM</p>
-          <p>Sabado</p>
-          <p>10:00 AM - 4:00 PM</p>
+          <div class="mb-2">
+            <p class="text-lg font-medium">Lunes - Viernes</p>
+            <p>9:00 AM - 5:00 PM</p>
+          </div>
+          <div class="mb-2">
+            <p class="text-lg font-medium">Sabado</p>
+            <p>10:00 AM - 4:00 PM</p>
+          </div>
+          <p class="text-lg font-medium">Domingo</p>
+          <p>Cerrado</p>
         </div>
       </div>
-      <div class="p-10 lg:p-20">
-        <h2 class="text-2xl font-medium mb-3">DropCargo Express</h2>
+      <div class="p-5 mb-10 lg:p-20">
+        <h2 class="text-2xl font-medium">DropCargo Express</h2>
+        <p class="text-xl mb-2">+507 6677-8743</p>
         <p class="mb-1 text-lg">Miraflores</p>
         <p class="mb-6">Calle 80B Oeste, Casa 195</p>
         <button class="btn btn-neutral"
