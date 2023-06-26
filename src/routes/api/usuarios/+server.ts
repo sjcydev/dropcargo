@@ -87,6 +87,10 @@ export const POST = async ({ request }: RequestEvent) => {
     await sibAPI
       .sendTransacEmail({
         sender: {
+          email: "info@dropcargoexpress.com",
+          name: "DropCargo Express",
+        },
+        replyTo: {
           email: "dropcargo.exp@gmail.com",
           name: "DropCargo Express",
         },
