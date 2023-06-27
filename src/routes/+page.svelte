@@ -36,6 +36,8 @@
     },
   ];
 
+  let direccionMapa = "https://maps.app.goo.gl/w8SLQSWZCCbS2sQa8?g_st=iw";
+
   let ready = false;
   onMount(() => (ready = true));
 </script>
@@ -198,11 +200,16 @@
         </div>
       </div>
       <div class="p-5 mb-10 lg:p-20">
-        <h2 class="text-2xl font-medium">DropCargo Express</h2>
-        <p class="text-xl mb-2">+507 6677-8743</p>
-        <p class="mb-1 text-lg">Miraflores</p>
-        <p class="mb-6">Calle 80B Oeste, Casa 195</p>
-        <button class="btn btn-neutral"
+        <h2 class="text-2xl font-medium mb-1">DropCargo Express</h2>
+        <div class="grid grid-cols-2 gap-6">
+          <p class="text-lg mb-2">+507 6630-2373</p>
+          <p class="text-lg mb-2">+507 6788-5008</p>
+        </div>
+        <p class="mb-1 text-base">Miraflores</p>
+        <p class="mb-6 text-sm">Calle 80B Oeste, Casa 195</p>
+        <button
+          class="btn btn-neutral"
+          on:click={() => window.open(direccionMapa, "_blank")}
           ><Fa icon={faMapLocationDot} /> Direccion</button
         >
       </div>
