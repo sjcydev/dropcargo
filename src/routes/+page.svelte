@@ -11,7 +11,9 @@
     faClock,
     faComments,
     faMapLocationDot,
+    faPhone,
   } from "@fortawesome/free-solid-svg-icons";
+  import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
   import { goto } from "$app/navigation";
 
   let precio = "$2.75";
@@ -201,9 +203,13 @@
       </div>
       <div class="p-5 mb-10 lg:p-20">
         <h2 class="text-2xl font-medium mb-1">DropCargo Express</h2>
-        <div class="grid grid-cols-2 gap-6">
-          <p class="text-lg mb-2">+507 6630-2373</p>
-          <p class="text-lg mb-2">+507 6788-5008</p>
+        <div class="grid lg:grid-cols-2 lg:gap-6">
+          <p class="text-lg mb-2 flex place-items-center gap-2">
+            <Fa icon={faPhone} /> +507 6630-2373
+          </p>
+          <p class="text-lg mb-2 flex place-items-center gap-2">
+            <Fa class="text-2xl" icon={faWhatsapp} /> +507 6788-5008
+          </p>
         </div>
         <p class="mb-1 text-base">Miraflores</p>
         <p class="mb-6 text-sm">Calle 80B Oeste, Casa 195</p>
