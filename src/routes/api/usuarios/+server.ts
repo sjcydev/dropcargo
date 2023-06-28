@@ -1,11 +1,7 @@
 import type { RequestEvent } from "./$types";
 import { prisma } from "$lib/server/prisma";
-import * as SIB from "@sendinblue/client";
-import { SECRET_SIB_API_KEY } from "$env/static/private";
-import BienvenidoEmail from "$lib/components/emails/BienvenidoEmail.svelte";
-import { render } from "svelte-email";
 
-export const POST = async ({ request }: RequestEvent) => {
+export const POST = async ({ request, fetch }: RequestEvent) => {
   let { usuario } = await request.json();
 
   let { nombre, apellido, cedula, correo, sexo, nacimiento } =
@@ -67,56 +63,17 @@ export const POST = async ({ request }: RequestEvent) => {
     );
   }
 
-  try {
-    const html = render({
-      template: BienvenidoEmail,
-      props: {
-        nombre,
-        apellido,
-        casillero: record.id,
-      },
-    });
-
-    const sibAPI = new SIB.TransactionalEmailsApi();
-
-    sibAPI.setApiKey(
-      SIB.TransactionalEmailsApiApiKeys.apiKey,
-      SECRET_SIB_API_KEY
-    );
-
-    await sibAPI
-      .sendTransacEmail({
-        sender: {
-          email: "info@dropcargoexpress.com",
-          name: "DropCargo Express",
-        },
-        replyTo: {
-          email: "dropcargo.exp@gmail.com",
-          name: "DropCargo Express",
-        },
-        to: [
-          {
-            email: correo,
-          },
-        ],
-        subject: "Bienvenido a DropCargo Express",
-        htmlContent: html,
-      })
-      .then((err) => {
-        return new Response(
-          JSON.stringify({ message: err, status: "warning" }),
-          {
-            headers: { "Content-Type": "application/json" },
-            status: 500,
-          }
-        );
-      });
-  } catch (err) {
-    return new Response(JSON.stringify({ message: err, status: "warning" }), {
-      headers: { "Content-Type": "application/json" },
-      status: 500,
-    });
-  }
+  await fetch("/api/emails", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
+    body: JSON.stringify({
+      nombre,
+      apellido,
+      casillero: record.id,
+      correo,
+      cedula,
+    }),
+  });
 
   return new Response(
     JSON.stringify({

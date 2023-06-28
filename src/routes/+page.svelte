@@ -11,9 +11,7 @@
     faClock,
     faComments,
     faMapLocationDot,
-    faPhone,
   } from "@fortawesome/free-solid-svg-icons";
-  import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
   import { goto } from "$app/navigation";
 
   let precio = "$2.75";
@@ -226,7 +224,7 @@
           </div>
         </div>
         <p class="mb-1 text-base">Miraflores</p>
-        <p class="mb-6 text-sm">Calle 80B Oeste, Casa 195</p>
+        <p class="mb-6 text-sm">Calle 79B Oeste, Casa 195</p>
         <button
           class="btn btn-neutral"
           on:click={() => window.open(direccionMapa, "_blank")}
