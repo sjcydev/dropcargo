@@ -13,6 +13,7 @@ model Usuarios {
   apellido   String
   correo     String   @unique
   cedula     String
+  telefono   String
   nacimiento DateTime @db.Date
   sexo       String
 }

@@ -6,7 +6,8 @@ import CasilleroEmailAdmin from "$lib/components/emails/CasilleroEmailAdmin.svel
 import { render } from "svelte-email";
 
 export const POST = async ({ request }: RequestEvent) => {
-  let { nombre, cedula, correo, apellido, casillero } = await request.json();
+  let { nombre, cedula, correo, telefono, apellido, casillero } =
+    await request.json();
 
   try {
     const html = render({
@@ -33,7 +34,6 @@ export const POST = async ({ request }: RequestEvent) => {
         },
         replyTo: {
           email: "dropcargo.exp@gmail.com",
-          name: "DropCargo Express",
         },
         to: [
           {
@@ -61,6 +61,7 @@ export const POST = async ({ request }: RequestEvent) => {
         casillero,
         cedula,
         correo,
+        telefono,
       },
     });
 

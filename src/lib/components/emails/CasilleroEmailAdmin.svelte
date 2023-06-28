@@ -22,6 +22,7 @@
   export let casillero: String;
   export let correo: String;
   export let cedula: String;
+  export let telefono: String;
 
   let codigo_de_compania = "DROP";
   let direccion = {
@@ -130,6 +131,8 @@
         Cedula: {cedula}
         <br />
         Correo: {correo}
+        <br />
+        Telefono: {telefono}
       </Text>
       <Hr style={hr} />
       <Heading style={heading2}>Información del Casillero</Heading>

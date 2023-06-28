@@ -4,7 +4,7 @@ import { prisma } from "$lib/server/prisma";
 export const POST = async ({ request, fetch }: RequestEvent) => {
   let { usuario } = await request.json();
 
-  let { nombre, apellido, cedula, correo, sexo, nacimiento } =
+  let { nombre, apellido, cedula, telefono, correo, sexo, nacimiento } =
     usuario as Usuario;
 
   let currUser = await prisma.usuarios.findUnique({
@@ -45,6 +45,7 @@ export const POST = async ({ request, fetch }: RequestEvent) => {
         cedula,
         correo,
         sexo,
+        telefono,
         nacimiento: fecha_nacimiento,
       },
     });

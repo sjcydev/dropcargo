@@ -9,6 +9,7 @@
     nombre: "",
     apellido: "",
     correo: "",
+    telefono: "",
     nacimiento: "",
     cedula: "",
     sexo: "",
@@ -17,6 +18,7 @@
       this.nombre = "";
       this.apellido = "";
       this.correo = "";
+      this.telefono = "";
       this.nacimiento = "";
       this.cedula = "";
       this.sexo = "";
@@ -102,6 +104,16 @@
         class="input input-bordered
         input-primary"
         bind:value={usuario.cedula}
+        required
+      />
+    </div>
+    <div class="form-control mt-3 lg:mt-4">
+      <input
+        type="text"
+        placeholder="Telefono"
+        class="input input-bordered
+        input-primary"
+        bind:value={usuario.telefono}
         required
       />
     </div>
