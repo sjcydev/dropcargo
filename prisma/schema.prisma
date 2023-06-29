@@ -17,3 +17,35 @@ model Usuarios {
   nacimiento DateTime @db.Date
   sexo       String
 }
+
+model auth_key {
+  id              String    @id @unique
+  hashed_password String?
+  user_id         String
+  primary_key     Boolean
+  expires         BigInt?
+  auth_user       auth_user @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+}
+
+model auth_session {
+  id             String    @id @unique
+  user_id        String
+  active_expires BigInt
+  idle_expires   BigInt
+  auth_user      auth_user @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+}
+
+model auth_user {
+  id               String         @id @unique
+  username         String         @unique
+  correo           String         @unique
+  nombre           String
+  apellido         String
+  password_updated Boolean        @default(false)
+  auth_key         auth_key[]
+  auth_session     auth_session[]
+}

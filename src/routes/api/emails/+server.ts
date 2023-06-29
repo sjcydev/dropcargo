@@ -18,6 +18,17 @@ export const POST = async ({ request }: RequestEvent) => {
         casillero,
       },
     });
+    const text = render({
+      template: BienvenidoEmail,
+      props: {
+        nombre,
+        apellido,
+        casillero,
+      },
+      options: {
+        plainText: true,
+      },
+    });
 
     const sibAPI = new SIB.TransactionalEmailsApi();
 
@@ -42,6 +53,7 @@ export const POST = async ({ request }: RequestEvent) => {
         ],
         subject: "Bienvenido a DropCargo Express",
         htmlContent: html,
+        textContent: text,
       })
       .then((err) => {
         return new Response(
@@ -65,6 +77,21 @@ export const POST = async ({ request }: RequestEvent) => {
       },
     });
 
+    const textAdmin = render({
+      template: CasilleroEmailAdmin,
+      props: {
+        nombre,
+        apellido,
+        casillero,
+        cedula,
+        correo,
+        telefono,
+      },
+      options: {
+        plainText: true,
+      },
+    });
+
     await sibAPI.sendTransacEmail({
       sender: {
         email: "info@dropcargoexpress.com",
@@ -73,6 +100,7 @@ export const POST = async ({ request }: RequestEvent) => {
       to: [{ email: "dropcargo.exp@gmail.com" }],
       subject: "Nuevo Casillero Registrado",
       htmlContent: admin,
+      textContent: textAdmin,
     });
   } catch (err) {
     return new Response(JSON.stringify({ message: err, status: "warning" }), {
