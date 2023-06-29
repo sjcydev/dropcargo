@@ -71,6 +71,7 @@ export const POST = async ({ request, fetch }: RequestEvent) => {
       nombre,
       apellido,
       casillero: record.id,
+      telefono,
       correo,
       cedula,
     }),
