@@ -33,6 +33,8 @@
     valid = validateAll(usuario);
     if (valid) {
       usuario.cedula = usuario.cedula.split(" ").join("");
+      usuario.telefono = usuario.telefono.split("-").join("");
+
       axios
         .post("/api/usuarios", { usuario })
         .then(({ data }) => {
