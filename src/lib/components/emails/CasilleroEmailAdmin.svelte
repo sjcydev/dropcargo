@@ -137,14 +137,14 @@
       <Hr style={hr} />
       <Heading style={heading2}>Información del Casillero</Heading>
       <Text style={paragraph}>
-        Nombre: {nombre}
-        {codigo_de_compania}{casillero}
+        Nombre: {codigo_de_compania}
+        {nombre}
         {apellido}
         <br />
         Address Line 1: {direccion.direccion1}
         {codigo_de_compania}
         <br />
-        Address Line 2: {codigo_de_compania}
+        Address Line 2: {codigo_de_compania}{casillero}
         <br />
         City: {direccion.ciudad}
         <br />
