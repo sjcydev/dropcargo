@@ -152,7 +152,7 @@
         <br />
         Zip Code: {direccion.zip}
         <br />
-        Country: {direccion.ciudad}
+        Country: {direccion.pais}
         <br />
         Tel: {direccion.tel}
       </Text>
