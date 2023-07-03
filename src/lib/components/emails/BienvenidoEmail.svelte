@@ -27,7 +27,7 @@
     direccion1: "7854 NW 46TH ST UNIT 2",
     estado: "FLORIDA",
     ciudad: "MIAMI",
-    zip: "33166",
+    zip: "33166-5461",
     pais: "UNITED STATES",
     tel: "+1 786-622-1058",
   };
