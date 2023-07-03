@@ -16,6 +16,7 @@ model Usuarios {
   telefono   String
   nacimiento DateTime @db.Date
   sexo       String
+  casillero  Int?
 }
 
 model auth_key {

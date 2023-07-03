@@ -49,6 +49,14 @@ export const POST = async ({ request, fetch }: RequestEvent) => {
         nacimiento: fecha_nacimiento,
       },
     });
+    record = await prisma.usuarios.update({
+      where: {
+        id: record.id,
+      },
+      data: {
+        casillero: record.id,
+      },
+    });
   } catch (err) {
     return new Response(
       JSON.stringify({
