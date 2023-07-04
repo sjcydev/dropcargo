@@ -54,7 +54,7 @@
   {#if ready}
     <div
       in:blur={{ duration: 750, amount: 2 }}
-      class="hero-content text-center text-primary-content flex-col
+      class="hero-content text-center text-base-100 flex-col
     lg:flex-row-reverse lg:gap-10 mb-32 lg:mb-0"
     >
       <div class="text-left p-4 lg:p-0">
@@ -72,9 +72,7 @@
   <Wave1 />
 </div>
 
-<div
-  class="card text-primary-content grid place-items-center px-10 lg:px-20 mb-10"
->
+<div class="card text-neutral grid place-items-center px-10 lg:px-20 mb-10">
   <div class="grid lg:grid-cols-2 w-full lg:w-3/4 place-items-center">
     <div>
       <div class="mb-10 grid place-items-center">
@@ -103,7 +101,7 @@
       </p>
       <div class="text-right">
         <button
-          class="btn btn-primary max-[1024px]:w-full"
+          class="btn btn-primary text-base-100 max-[1024px]:w-full"
           on:click={() => goto("/registrar")}>Consigue tu Casillero</button
         >
       </div>
@@ -117,19 +115,20 @@
     url(https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80);"
 >
   <div class="hero-overlay bg-opacity-50" />
-  <div class="hero-content text-center text-primary-content">
+  <div class="hero-content text-center text-base-100">
     <div class="max-w-md">
       <h1 class="mb-5 text-4xl lg:text-5xl font-bold">Una vez en Miami</h1>
       <p class="mb-5">Le entregamos su paquete en 48 horas!</p>
-      <button class="btn btn-primary" on:click={() => goto("/registrar")}
-        >Comprar en Linea</button
+      <button
+        class="btn btn-primary text-base-100"
+        on:click={() => goto("/registrar")}>Comprar en Linea</button
       >
     </div>
   </div>
   <Wave1 />
 </div>
 
-<div class="hero bg-base-100 text-primary-content p-12 lg:p-0 mb-10">
+<div class="hero bg-base-100 text-neutral p-12 lg:p-0 mb-10">
   <div class="hero-content text-center">
     <div>
       <h1 class="text-3xl lg:text-4xl font-bold mb-12">Nuestros Servicios</h1>
@@ -163,7 +162,7 @@
     url(https://images.unsplash.com/photo-1633174524827-db00a6b7bc74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1496&q=80);"
 >
   <div class="hero-overlay bg-opacity-50" />
-  <div class="hero-content text-center text-primary-content">
+  <div class="hero-content text-center text-base-100">
     <div class="max-w-md">
       <h1 class="mb-5 text-3xl lg:text-5xl font-medium">
         Abre tu cuenta totalmente
@@ -174,15 +173,16 @@
         tu casilla hoy, es GRATIS Ofrecemos también el servicio a domicilio, el
         costo depende del área de entrega.
       </p>
-      <button class="btn btn-primary" on:click={() => goto("/registrar")}
-        >Abre tu Cuenta Gratis</button
+      <button
+        class="btn btn-primary text-base-100"
+        on:click={() => goto("/registrar")}>Abre tu Cuenta Gratis</button
       >
     </div>
   </div>
 </div>
 
 <div class="hero lg:h-fit relative bg-base-100">
-  <div class="hero-content text-primary-content">
+  <div class="hero-content text-neutral">
     <div class="grid lg:grid-cols-2 place-items-center">
       <div class="w-full p-5 lg:p-20">
         <h1 class="mb-3 text-3xl font-medium">Horario</h1>

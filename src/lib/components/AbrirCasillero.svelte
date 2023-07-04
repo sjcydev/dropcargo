@@ -57,7 +57,7 @@
 </script>
 
 <form
-  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100"
+  class="card flex-shrink-0 max-w-lg w-full shadow-2xl bg-base-100 text-neutral"
   method="POST"
   on:submit|preventDefault={(e) => crearUsuario(e)}
 >
@@ -156,7 +156,7 @@
       </div>
     </div>
     <div class="form-control mt-6">
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary text-base-100">
         {#if registering}
           <span class="loading loading-spinner loading-md" />
         {:else}
