@@ -166,17 +166,3 @@
     </div>
   </div>
 </form>
-
-<style>
-  :global(.my-colors) {
-    --sdt-primary: hsl(var(--p));
-    --sdt-color: #eee;
-    --sdt-color-selected: #eee;
-    --sdt-bg-main: hsl(var(--b1));
-    --sdt-bg-clear: #dc3545;
-    --sdt-clear-color: #dc3545;
-    --sdt-btn-bg-hover: hsl(var(--p));
-    --sdt-btn-header-bg-hover: hsl(var(--p));
-    --sdt-disabled-date: hsl(var(--nc));
-  }
-</style>
