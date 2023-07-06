@@ -40,7 +40,7 @@ export const POST = async ({ request }: RequestEvent) => {
     await sibAPI
       .sendTransacEmail({
         sender: {
-          email: "dropcargo.exp@gmail.com",
+          email: "info@dropcargoexpress.com",
           name: "DropCargo Express",
         },
         to: [
