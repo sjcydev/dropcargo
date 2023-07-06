@@ -133,7 +133,6 @@
           todayBtn={false}
           endDate={maxDate}
           required
-          theme="my-colors"
           bind:value={usuario.nacimiento}
         />
       </div>
