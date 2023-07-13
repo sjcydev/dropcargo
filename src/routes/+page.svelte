@@ -184,62 +184,65 @@
 
 <div class="hero lg:h-fit relative bg-base-100">
   <div class="hero-content text-neutral">
-    <div class="grid lg:grid-cols-2 place-items-center">
-      <div class="w-full p-5 lg:p-20">
-        <h1 class="mb-3 text-3xl font-medium flex gap-2 items-center">
-          <Fa icon={faClock} />Horario
-        </h1>
-        <div>
-          <div class="mb-2">
-            <p class="text-lg font-medium">Lunes - Viernes</p>
-            <p>9:00 AM - 5:00 PM</p>
-          </div>
-          <div class="mb-2">
-            <p class="text-lg font-medium">Sabado</p>
-            <p>10:00 AM - 4:00 PM</p>
-          </div>
-          <p class="text-lg font-medium">Domingo</p>
-          <p>Cerrado</p>
-        </div>
+    <div class="grid lg:grid-cols-2 place-items-center mt-10">
+      <div>
+        <img
+          class="rounded-lg"
+          src={Location}
+          alt="DropCargo Express ubicacion del lugar"
+        />
       </div>
-      <div class="p-5 mb-10 lg:p-20">
-        <h2 class="text-2xl font-medium mb-1">DropCargo Express</h2>
-        <div class="grid lg:grid-cols-2 lg:gap-10 mb-3">
+      <div class="md:grid md:grid-cols-2 lg:grid-cols-1">
+        <div class="w-full p-5 lg:px-20">
+          <h1 class="mb-3 text-3xl font-medium flex gap-2 items-center">
+            <Fa icon={faClock} />Horario
+          </h1>
           <div>
-            <p>Primario</p>
-            <a
-              href="https://wa.me/+50766302373"
-              class="text-lg mb-2 flex place-items-center gap-2"
-              target="_blank"
-            >
-              <!-- <Fa icon={faPhone} /> --> +507 6630-2373
-            </a>
-          </div>
-          <div>
-            <p>Secundario</p>
-            <a
-              href="https://wa.me/+50767885008"
-              class="text-lg mb-2 flex place-items-center gap-2"
-              target="_blank"
-            >
-              <!--  <Fa class="text-2xl" icon={faWhatsapp} /> --> +507 6788-5008
-            </a>
+            <div class="mb-2">
+              <p class="text-lg font-medium">Lunes - Viernes</p>
+              <p>9:00 AM - 5:00 PM</p>
+            </div>
+            <div class="mb-2">
+              <p class="text-lg font-medium">Sabado</p>
+              <p>10:00 AM - 4:00 PM</p>
+            </div>
+            <p class="text-lg font-medium">Domingo</p>
+            <p>Cerrado</p>
           </div>
         </div>
-        <p class="mb-1 text-base">Miraflores</p>
-        <p class="mb-6 text-sm">Calle 79B Oeste, Casa 195</p>
-        <div>
-          <img
-            class="rounded-lg"
-            src={Location}
-            alt="DropCargo Express ubicacion del lugar"
-          />
+        <div class="p-5 mb-10 lg:px-20">
+          <h2 class="text-2xl font-medium mb-1">DropCargo Express</h2>
+          <div class="grid lg:grid-cols-2 lg:gap-10 mb-3">
+            <div>
+              <p>Primario</p>
+              <a
+                href="https://wa.me/+50766302373"
+                class="text-lg mb-2 flex place-items-center gap-2"
+                target="_blank"
+              >
+                <!-- <Fa icon={faPhone} /> --> +507 6630-2373
+              </a>
+            </div>
+            <div>
+              <p>Secundario</p>
+              <a
+                href="https://wa.me/+50767885008"
+                class="text-lg mb-2 flex place-items-center gap-2"
+                target="_blank"
+              >
+                <!--  <Fa class="text-2xl" icon={faWhatsapp} /> --> +507 6788-5008
+              </a>
+            </div>
+          </div>
+          <p class="mb-1 text-base">Miraflores</p>
+          <p class="mb-6 text-sm">Calle 79B Oeste, Casa 195</p>
+
+          <button
+            class="btn btn-neutral mt-7"
+            on:click={() => window.open(direccionMapa, "_blank")}
+            ><Fa icon={faMapLocationDot} /> Direccion</button
+          >
         </div>
-        <button
-          class="btn btn-neutral mt-7"
-          on:click={() => window.open(direccionMapa, "_blank")}
-          ><Fa icon={faMapLocationDot} /> Direccion</button
-        >
       </div>
     </div>
   </div>
