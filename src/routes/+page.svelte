@@ -13,6 +13,7 @@
     faMapLocationDot,
   } from "@fortawesome/free-solid-svg-icons";
   import { goto } from "$app/navigation";
+  import Location from "$lib/assets/location.jpeg";
 
   let precio = "$2.75";
 
@@ -185,7 +186,9 @@
   <div class="hero-content text-neutral">
     <div class="grid lg:grid-cols-2 place-items-center">
       <div class="w-full p-5 lg:p-20">
-        <h1 class="mb-3 text-3xl font-medium">Horario</h1>
+        <h1 class="mb-3 text-3xl font-medium flex gap-2 items-center">
+          <Fa icon={faClock} />Horario
+        </h1>
         <div>
           <div class="mb-2">
             <p class="text-lg font-medium">Lunes - Viernes</p>
@@ -225,8 +228,15 @@
         </div>
         <p class="mb-1 text-base">Miraflores</p>
         <p class="mb-6 text-sm">Calle 79B Oeste, Casa 195</p>
+        <div>
+          <img
+            class="rounded-lg"
+            src={Location}
+            alt="DropCargo Express ubicacion del lugar"
+          />
+        </div>
         <button
-          class="btn btn-neutral"
+          class="btn btn-neutral mt-7"
           on:click={() => window.open(direccionMapa, "_blank")}
           ><Fa icon={faMapLocationDot} /> Direccion</button
         >
