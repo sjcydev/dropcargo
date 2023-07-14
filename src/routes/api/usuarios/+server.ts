@@ -88,7 +88,7 @@ export const POST = async ({ request, fetch }: RequestEvent) => {
   return new Response(
     JSON.stringify({
       message:
-        "Casillero Registrado Exitosamente! Pronto recibiras un correo con mas detalles.",
+        "Casillero Registrado Exitosamente! Pronto recibiras un correo con mas detalles. Recuerda revisar tu folder de Spam.",
       status: "success",
     }),
     {
