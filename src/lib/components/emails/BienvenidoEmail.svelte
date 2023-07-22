@@ -183,30 +183,31 @@
         </li>
         <li>
           <Text style={footerText}>
-            En caso de pérdida se hará responsable al 100 % una vez el cliente
-            tenga asegurada su mercancía. De lo contrario solo nos haremos
-            responsables por el 25% del valor y contamos con 8 días hábiles para
-            realizar las averiguaciones pertinentes, una vez se tenga la certeza
-            con firma incluida de uno de nuestros colaboradores en la bodega en
-            Miami.
+            En caso de pérdida nos haremos responsable al 100 % una vez el
+            cliente tenga asegurada su mercancía una vez se tenga la certeza con
+            firma incluida de uno de nuestros colaboradores en la bodega en
+            Miami. De lo contrario solo nos haremos responsables por el 25% del
+            valor y contamos con 8 días hábiles para realizar las averiguaciones
+            pertinentes, una vez se tenga la certeza con firma incluida de uno
+            de nuestros colaboradores en la bodega en Miami.
           </Text>
         </li>
         <li>
           <Text style={footerText}>
-            NO podemos hacernos responsables por carga entregada por USPS puesto
-            que no tenemos seguridad de entrega.
+            NO nos hacemos responsables por carga entregada por USPS puesto que
+            no tenemos seguridad de entrega.
           </Text>
         </li>
         <li>
           <Text style={footerText}>
-            No podemos hacernos responsable por daño en mercancía mal empacada
-            por exportación
+            NO nos hacemos responsable por daño en mercancía mal empacada por
+            exportación.
           </Text>
         </li>
         <li>
           <Text style={footerText}>
-            No podemos hacernos responsable por paquetes, después de 1 mes de no
-            ser retirado en la oficina.
+            NO nos haremos responsable por paquetes después de 1 mes de no ser
+            retirado de la oficina.
           </Text>
         </li>
       </ul>
