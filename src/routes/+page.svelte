@@ -37,7 +37,7 @@
     },
   ];
 
-  let direccionMapa = "https://maps.app.goo.gl/w8SLQSWZCCbS2sQa8?g_st=iw";
+  let direccionMapa = "https://goo.gl/maps/LHDtR6rSv4K6YK1v6";
 
   let ready = false;
   onMount(() => (ready = true));
